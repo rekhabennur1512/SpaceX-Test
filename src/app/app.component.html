@@ -1,0 +1,56 @@
+<div class="container">
+  <div class="jumbotron">
+    <h2>SpaceX Launch Programm</h2>
+    <div class="row">
+      <div class="col-sm-12 col-md-4 col-lg-4 cusBg">
+        <h3 class="cusLeft">Filters</h3>
+        <h4>Launch year</h4>
+        <hr />
+        <div class="row">
+          <div class="col-sm-6 col-md-2 col-lg-2">
+
+            <button type="button" class="btn btn-success marRight" *ngFor="let i of launchItems">
+              {{i.launch_year}}
+            </button>
+          </div>
+
+        </div>
+        <div class="row">
+          <div class="col-sm-12 col-md-12 col-lg-12">
+            <h6 class="textCenter">Successful Launch</h6>
+            <hr>
+            <div>
+              <button type="button" class="btn btn-success marRight">True</button>
+              <button type="button" class="btn btn-success">False</button>
+            </div>
+
+
+            <h6 class="textCenter">Successful Landing</h6>
+            <hr>
+            <div>
+              <button type="button" class="btn btn-success marRight">True</button>
+              <button type="button" class="btn btn-success">False</button>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div class="col-sm-12 col-md-8 col-lg-8">
+        <div class="row">
+          <div class="col-sm-3 col-md-3 col-lg-3" *ngFor="let item of spaceItems">
+            <div class="wrapper">
+              <img class="ri" src="http://dummyimage.com/200x200/3498db/fff">
+              <p>{{item.mission_name}}</p>
+              <p>Mission Ids: {{item.mission_id}}</p>
+              <p>Launch year: {{item.launch_year}}</p>
+              <p>Successful Launch: {{item.launch_success}}</p>
+              <p>Successful Landing: launch_landing </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
